@@ -1,0 +1,15 @@
+{
+  "backup_data_uid": "8b91c4da4be6ab9d", 
+  "backup_module_uid": "1dc07ee0f4742028", 
+  "backup_module_uoa": "package", 
+  "control": {
+    "engine": "CK", 
+    "iso_datetime": "2018-11-12T17:16:28.841977", 
+    "version": [
+      "1", 
+      "9", 
+      "5"
+    ]
+  }, 
+  "data_name": "tensorflowmodel-object-detection-ssd-mobilenet-v1-coco-tflite"
+}
