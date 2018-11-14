@@ -1,9 +1,11 @@
 #
-# Collective Knowledge (individual environment - setup)
+# Copyright (c) 2018 cTuning foundation.
+# See CK COPYRIGHT.txt for copyright details.
 #
-# See CK LICENSE.txt for licensing details
-# See CK COPYRIGHT.txt for copyright details
+# SPDX-License-Identifier: BSD-3-Clause.
+# See CK LICENSE.txt for licensing details.
 #
+
 
 import os
 
@@ -59,8 +61,12 @@ def setup(i):
     # Init common variables, they are set for all models
     env[ep+'_MODEL_NAME'] = install_env['MODEL_NAME']
     env[ep+'_DATASET_TYPE'] = install_env['DATASET_TYPE']
-    env[ep+'_FROZEN_GRAPH'] = os.path.join(install_dir, install_env['FROZEN_GRAPH'])
-    env[ep+'_WEIGHTS_FILE'] = os.path.join(install_dir, install_env['WEIGHTS_FILE'])
+    if 'FROZEN_GRAPH' in install_env:
+      env[ep+'_FROZEN_GRAPH'] = os.path.join(install_dir, install_env['FROZEN_GRAPH'])
+    if 'WEIGHTS_FILE' in install_env:
+      env[ep+'_WEIGHTS_FILE'] = os.path.join(install_dir, install_env['WEIGHTS_FILE'])
+    if 'TFLITE_FILE' in install_env:
+      env[ep+'TFLITE_FILE'] = os.path.join(install_dir, install_env['TFLITE_FILE'])
     env[ep+'_LABELMAP_FILE'] = os.path.join(install_dir, install_env['LABELMAP_FILE'])
 
     return {'return': 0, 'bat': ''}

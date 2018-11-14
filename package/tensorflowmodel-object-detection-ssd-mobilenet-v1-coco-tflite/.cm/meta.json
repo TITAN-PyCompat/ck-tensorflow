@@ -4,12 +4,13 @@
     "extra_dir": "",
     "install_env": {
       "DATASET_TYPE": "coco",
-      "FLATBUFFER": "mobilenet_ssd.tflite",
-      "LABELMAP_FILE": "coco_labels_list.txt",
-      "ANNOTATIONS": "box_priors.txt",
+      "TFLITE_FILE": "mobilenet_ssd.tflite",
+      "LABELMAP_FILE": "mscoco_label_map.pbtxt",
       "MODEL_NAME": "SSD-MobileNet-v1 TFlite for COCO",
       "PACKAGE_NAME": "mobilenet_ssd_tflite_v1.zip",
-      "PACKAGE_URL": "https://storage.googleapis.com/download.tensorflow.org/models/tflite"
+      "PACKAGE_NAME1": ".",
+      "PACKAGE_URL": "https://storage.googleapis.com/download.tensorflow.org/models/tflite",
+      "PACKAGE_UNZIP": "YES"
     },
     "model_id": "mobilenet_v1",
     "no_os_in_suggested_path": "yes",
@@ -34,11 +35,12 @@
   ],
   "package_extra_name": " (SSD-MobileNet-v1, TFlite, COCO)",
   "process_script": "install",
-  "soft_uoa": "56cc8b426e90f303",
+  "soft_uoa": "3fc0c4b9ba63de2f",
   "suggested_path": "tensorflowmodel-object-detection-ssd_mobilenet_v1_coco_tflite",
   "tags": [
     "tensorflowmodel",
-    "object-detection-tflite",
+    "object-detection",
+    "tflite",
     "ssd",
     "mobilenet",
     "mobilenet-v1",
@@ -48,7 +50,7 @@
     "channel-stable"
   ], 
   "use_scripts_from_another_entry": {
-    "data_uoa": "d9b5271354984205",
+    "data_uoa": "c412930408fb8271",
     "module_uoa": "script"
   }
 }

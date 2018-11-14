@@ -5,6 +5,7 @@
     "install_env": {
       "PACKAGE_NAME": "ssd_mobilenet_v1_coco_2018_01_28.tar.gz",
       "PACKAGE_NAME1": "ssd_mobilenet_v1_coco_2018_01_28",
+      "PACKAGE_UNTARGZ": "YES",
       "FROZEN_GRAPH": "frozen_inference_graph.pb",
       "PACKAGE_URL": "http://download.tensorflow.org/models/object_detection",
       "DATASET_TYPE": "coco",

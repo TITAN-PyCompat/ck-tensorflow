@@ -5,6 +5,7 @@
     "install_env": {
       "PACKAGE_NAME": "faster_rcnn_resnet101_kitti_2018_01_28.tar.gz",
       "PACKAGE_NAME1": "faster_rcnn_resnet101_kitti_2018_01_28",
+      "PACKAGE_UNTARGZ": "YES",
       "FROZEN_GRAPH": "frozen_inference_graph.pb",
       "PACKAGE_URL": "http://download.tensorflow.org/models/object_detection",
       "DATASET_TYPE": "kitti",

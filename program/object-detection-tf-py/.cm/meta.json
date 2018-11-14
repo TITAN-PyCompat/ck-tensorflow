@@ -16,7 +16,8 @@
       "local": "yes",
       "name": "TensorFlow object detection model",
       "sort": 30,
-      "tags": "tensorflowmodel,object-detection"
+      "tags": "tensorflowmodel,object-detection",
+      "no_tags": "tflite"
     },
     "tool-coco":{
       "local": "yes",
