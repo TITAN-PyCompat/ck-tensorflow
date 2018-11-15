@@ -1,0 +1,96 @@
+{
+  "backup_data_uid": "ec5ea5358f4bf2bf", 
+  "compile_deps": {
+    "compiler": {
+      "local": "yes", 
+      "name": "C++ compiler", 
+      "sort": 0, 
+      "tags": "compiler,lang-cpp"
+    }, 
+    "library": {
+      "local": "yes", 
+      "name": "TensorFlow C++ API", 
+      "sort": 20, 
+      "tags": "lib,tensorflow-lite,vstatic"
+    }, 
+    "xopenme": {
+      "local": "yes", 
+      "name": "xOpenME library", 
+      "sort": 100, 
+      "tags": "lib,xopenme"
+    }
+  }, 
+  "compiler_add_include_as_env_from_deps": [
+    "CK_ENV_LIB_STDCPP_INCLUDE", 
+    "CK_ENV_LIB_STDCPP_INCLUDE_EXTRA", 
+    "CK_ENV_LIB_TF_INCLUDE0", 
+    "CK_ENV_LIB_TF_INCLUDE1"
+  ], 
+  "compiler_env": "CK_CXX", 
+  "compiler_flags_as_env": "$<<CK_COMPILER_FLAG_CPP11>>$ -Wall -Wno-sign-compare", 
+  "data_name": "object-detection-tflite", 
+  "extra_ld_vars": "$<<CK_ENV_LIB_TF_LIBS_DIRS>>$ $<<CK_ENV_LIB_TF_LIBS>>$", 
+  "linker_add_lib_as_env": [
+    "CK_CXX_EXTRA", 
+    "CK_ENV_LIB_STDCPP_STATIC"
+  ], 
+  "main_language": "cpp", 
+  "only_for_target_os_tags": [
+    "linux", 
+    "android"
+  ], 
+  "process_in_tmp": "yes", 
+  "program": "yes", 
+  "run_cmds": {
+    "default": {
+      "ignore_return_code": "no", 
+      "run_time": {
+        "fine_grain_timer_file": "tmp-ck-timer.json", 
+        "post_process_cmds": [
+          "python $#ck_take_from_{script:6b720adf26b3e342}#$postprocess.py"
+        ], 
+        "post_process_via_ck": "no", 
+        "pre_process_via_ck": {
+          "data_uoa": "6b720adf26b3e342", 
+          "module_uoa": "script", 
+          "script_name": "preprocess"
+        }, 
+        "run_cmd_main": "$#BIN_FILE#$", 
+        "run_output_files": [
+          "tmp-ck-timer.json"
+        ]
+      }
+    }
+  }, 
+  "run_deps": {
+    "dataset": {
+      "local": "yes",
+      "sort": 20,
+      "name": "Object detection dataset", 
+      "tags": "dataset,object-detection"
+    },
+    "weights": {
+      "force_target_as_host": "yes", 
+      "local": "yes", 
+      "name": "TensorFlow model and weights", 
+      "sort": 30, 
+      "tags": "tensorflowmodel,object-detection,tflite"
+    }
+  }, 
+  "run_vars": {
+    "CK_BATCH_COUNT": 1, 
+    "CK_BATCH_SIZE": 1, 
+    "CK_IMAGE_FILE": "", 
+    "CK_RECREATE_CACHE": "NO", 
+    "CK_SKIP_IMAGES": 0
+  }, 
+  "skip_bin_ext": "yes", 
+  "source_files": [
+    "detection.cpp"
+  ], 
+  "tags": [
+    "tensorflow-lite-object-detection"
+  ], 
+  "target_file": "detection", 
+  "template": "yes"
+}

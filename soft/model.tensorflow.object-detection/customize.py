@@ -66,7 +66,7 @@ def setup(i):
     if 'WEIGHTS_FILE' in install_env:
       env[ep+'_WEIGHTS_FILE'] = os.path.join(install_dir, install_env['WEIGHTS_FILE'])
     if 'TFLITE_FILE' in install_env:
-      env[ep+'TFLITE_FILE'] = os.path.join(install_dir, install_env['TFLITE_FILE'])
+      env[ep+'_TFLITE_FILE'] = os.path.join(install_dir, install_env['TFLITE_FILE'])
     env[ep+'_LABELMAP_FILE'] = os.path.join(install_dir, install_env['LABELMAP_FILE'])
 
     return {'return': 0, 'bat': ''}
